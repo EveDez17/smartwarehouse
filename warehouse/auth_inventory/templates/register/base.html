@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SIS-Smart Inventory System{% endblock %}</title>
+    {% block extrahead %}{% endblock %}
+</head>
+<body>
+    <header>
+        <!-- Site header content here -->
+    </header>
+
+    <nav>
+        <!-- Navigation bar content here -->
+    </nav>
+
+    <main>
+        {% block content %}
+        <!-- Main content goes here -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+
+    {% block extrajs %}{% endblock %}
+    <!-- Bootstrap 5 CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap 5 Bundle JS (includes Popper) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

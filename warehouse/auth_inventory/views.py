@@ -1,6 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import RegisterForm
 
-from django.http import HttpResponse
 
-def index(request):
-    return HttpResponse("Hello World")
+
+def index(response):
+    if response.method == "POST":
+        form = RegisterForm(response.POST)
+        if form.is_valid():
+            form.save()
+            
+            return redirect("/register")
+        else:
+            form = RegisterForm()
+
+    form = RegisterForm()
+    return render(response, "register/register.html", {"form":form} )
